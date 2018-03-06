@@ -1,0 +1,7 @@
+<mat-card>
+  <mat-radio-group [(ngModel)]="langCode" (change)="syncToService($event.value)">
+    <mat-radio-button *ngFor="let lang of langMetadata" [value]="lang.code">
+      {{lang | langSelectorBtn}}
+    </mat-radio-button>
+  </mat-radio-group>
+</mat-card>
